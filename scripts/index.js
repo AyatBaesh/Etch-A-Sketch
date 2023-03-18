@@ -1,11 +1,11 @@
-const gridContainer = document.querySelector('.grid');
+const gridContainer = document.querySelector('#sketchpad');
 const clearButton = document.querySelector('#clear');
 const gridRange = document.querySelector('#grid-range');
 const rangeLabel = document.querySelector('#range-label');
 
 function  createGrid(rows,columns){
-    gridContainer.style.setProperty('rows', rows);
-    gridContainer.style.setProperty('columns', columns);
+    // gridContainer.style.setProperty('rows', rows);
+    // gridContainer.style.setProperty('columns', columns);
     gridContainer.style.setProperty('grid-template-rows', `repeat(${rows}, 1fr)`);
     gridContainer.style.setProperty('grid-template-columns', `repeat(${columns}, 1fr)`);
     
@@ -17,16 +17,17 @@ function  createGrid(rows,columns){
     }
     
     const gridItem = document.querySelectorAll('.grid-item');
+
     gridItem.forEach((item) => {
-    item.addEventListener('mouseover', event => {
-        item.style.backgroundColor = 'black';
+        item.addEventListener('mouseover', event => {
+            item.style.backgroundColor = 'black';
+        });
     });
-});
-clearButton.addEventListener('click', event => {
-    gridItem.forEach((item) => {
-        item.style.backgroundColor = 'white';
+    clearButton.addEventListener('click', event => {
+        gridItem.forEach((item) => {
+            item.style.backgroundColor = 'white';
+        })
     })
-})
     
     
 }
