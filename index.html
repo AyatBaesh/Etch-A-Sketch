@@ -14,16 +14,33 @@
         <h1 class = "header-h1">Etch-A-Sketch</h1>
     </header>
     <div class = "main">
-        <div class = "grid" id = "sketchpad">
-
-        </div>
-        <form class = "form" id = "controls">
-            <label for = "grid-range" id = "range-label">grid size: 16x16</label><br>
-            <input type = "range" min = "16" max = "64" step = "1" value = "16" id = "grid-range">
-            
-            
+        <form class = "sketchpad-control" id = "controls">
+            <div class = "size control">
+                <label for = "gridSize" id = "gridSizeLabel">Grid size: 16x16</label>
+                <input type = "range" min = "16" max = "64" step = "1" value = "16" id = "gridSize">
+            </div>
+            <div class = "color-panel control">
+                <div class = "main-color ">
+                    <label for="colorPicker">Choose color:</label>
+                    <input type="color" class="color-picker" id="colorPicker">
+                    <button id = "chosenColor" class = "btn-small">Accept</button>
+                </div>
+                <div class = "background-color">
+                    <label for="backgroundColorPicker">Choose background color(Will reset the board):</label>
+                    <input type="color" class = "color-picker" id="backgroundColorPicker">
+                    <button id = "backgroundColor" class = "btn-small">Accept</button>
+                </div>
+            </div>
+            <div class = "clear control">
+                <button id = "clear" class = "btn">Clear</button>
+                <button id = "eraser" class = "btn">Eraser</button>
+            </div>
         </form>
-        <button id = "clear" class = "btn">Clear</button>
+        <div class = "grid" id = "sketchpad">
+            
+        </div>
+        
+        
     </div>
 </body>
 </html>
