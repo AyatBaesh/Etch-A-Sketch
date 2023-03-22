@@ -73,7 +73,7 @@ function removeGrid(){
 
 
 createGrid(16); //creating default grid
-gridSize.addEventListener('click', event => { // GRID SIZE CHANGING
+gridSize.addEventListener('input', event => { // GRID SIZE CHANGING
     removeGrid();
     gridSizeLabel.innerText = `Grid size: ${gridSize.value}x${gridSize.value}`; //updating current size text
     createGrid(gridSize.value);
