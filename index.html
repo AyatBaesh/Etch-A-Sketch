@@ -14,10 +14,11 @@
         <h1 class = "header-h1">Etch-A-Sketch</h1>
     </header>
     <div class = "main">
-        <form class = "sketchpad-control" id = "controls">
+        <div class = "sketchpad-control" id = "controls">
             <div class = "size control">
                 <label for = "gridSize" id = "gridSizeLabel">Grid size: 16x16</label>
                 <input type = "range" min = "16" max = "64" step = "1" value = "16" id = "gridSize">
+                <button id = "gridSizeButton" class = "btn">Accept</button>
             </div>
             <div class = "color-panel control">
                 <div class = "main-color ">
@@ -35,7 +36,7 @@
                 <button id = "clear" class = "btn">Clear</button>
                 <button id = "eraser" class = "btn">Eraser</button>
             </div>
-        </form>
+        </div>
         <div class = "grid" id = "sketchpad">
             
         </div>
